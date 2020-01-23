@@ -1,0 +1,49 @@
+main .breadcrumb-list {
+  height: 64px;
+  line-height: 64px;
+  margin: 0;
+}
+main .breadcrumb-list .first {
+  color: #222;
+}
+main .breadcrumb-list .second {
+  color: #acacac;
+}
+main .breadcrumb-list .third {
+  color: #acacac;
+}
+main .breadcrumb-list .breadcrumb {
+  cursor: default;
+}
+main .breadcrumb-list .breadcrumb:before {
+  color: #757575;
+}
+main form {
+  height: 411px;
+}
+main form .folderName {
+  margin: 10px 0 0 0;
+}
+main form .folderName label {
+  font-size: 20px;
+}
+main form .cloudName {
+  margin: 30px 0 20px 0;
+}
+main form .cloudName label {
+  font-size: 18px;
+}
+main form .ignore {
+  padding: 0 0 50px 0;
+}
+main form .btn-range {
+  margin-top: 107px;
+}
+main form .btn-range .btn-origin {
+  margin: 0 10px 0 10px;
+}
+main form .ignore-str {
+  cursor: pointer;
+  font-size: 16px;
+  color: #222;
+}

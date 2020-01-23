@@ -1,0 +1,74 @@
+main {
+
+    .breadcrumb-list {
+        @extend .row !optional;
+        height: 64px;
+        line-height: 64px;
+        margin: 0;
+
+        .first {
+            color: #acacac;
+        }
+
+        .second {
+            color: #acacac;
+        }
+
+        .third {
+            color: #222;
+        }
+
+        .breadcrumb {
+            @extend .breadcrumb !optional;
+            @extend .grey-text !optional;
+
+            &:last-child {
+                @extend .black-text !optional;
+            }
+
+            &:before {
+                color: #757575;
+            }
+
+            cursor: default;
+        }
+    }
+
+    form {
+        //background-color: lightgreen;
+        height: 411px;
+
+        .key-range {
+
+            input[type=text] {
+                font-size: 20px;
+                color: #222;
+            }
+            label {
+                font-size: 16px;
+            }
+
+        }
+
+        .key-range2 {
+            margin: 20px 0 0 0;
+        }
+
+        .deployLink {
+            margin: 30px 0 0 0;
+        }
+
+        .btn-range {
+            //background-color: lightcoral;
+            margin: 55px 0 0 0;
+
+            .btn-origin {
+                margin: 0 10px 0 10px;
+            }
+        }
+    }
+}
+
+.aaa {
+    font-size: 35px;
+}

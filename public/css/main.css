@@ -1,0 +1,14 @@
+main {
+  position: relative;
+}
+main .createBtn {
+  position: absolute;
+  bottom: 5vh;
+}
+main .createBtn .hoge {
+  height: 60px;
+  background-color: blue;
+}
+main .createBtn .hoge:hover {
+  background-color: red;
+}

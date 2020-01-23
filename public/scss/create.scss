@@ -1,0 +1,83 @@
+main {
+
+    //background-color: lightgoldenrodyellow;
+
+    .breadcrumb-list {
+        @extend .row !optional;
+        height: 64px;
+        line-height: 64px;
+        margin: 0;
+
+        .first {
+            color: #222;
+        }
+
+        .second {
+            color: #acacac;
+        }
+
+        .third {
+            color: #acacac;
+        }
+
+        .breadcrumb {
+            @extend .breadcrumb !optional;
+            @extend .grey-text !optional;
+
+            &:last-child {
+                @extend .black-text !optional;
+            }
+
+            &:before {
+                color: #757575;
+            }
+
+            cursor: default;
+        }
+    }
+
+    form {
+        //background-color: lightgreen;
+        //margin-top: 5vh;
+        height: 411px;
+
+        .folderName {
+            margin: 10px 0 0 0;
+
+            label {
+                font-size: 20px;
+            }
+        }
+
+        .cloudName {
+            margin: 30px 0 20px 0;
+
+            label {
+                font-size: 18px;
+            }
+        }
+
+        .ignore {
+            padding: 0 0 50px 0;
+        }
+
+        .btn-range {
+            //background-color: lightcoral;
+            margin-top: 107px;
+
+            .btn-origin {
+                margin: 0 10px 0 10px;
+            }
+        }
+
+        .ignore-str {
+            cursor: pointer;
+            font-size: 16px;
+            color: #222;
+        }
+    }
+}
+
+
+
+

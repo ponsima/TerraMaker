@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        color: #222222;
+
+        main {
+            flex: 1 0 auto;
+
+
+        }
+    }
+}
