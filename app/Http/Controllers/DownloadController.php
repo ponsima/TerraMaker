@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Chumper\Zipper\Facades\Zipper;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Log;
 use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
 
 class DownloadController extends Controller
@@ -12,13 +13,6 @@ class DownloadController extends Controller
 
     public function download(Request $request)
     {
-//        $request->session()->flash('accessKey', $request->input('accessKey'));
-//        $request->session()->flash('accessKey', $request->input('secretKey'));
-//        $request->session()->flash('accessKey', $request->input('gitRepository'));
-//        $request->session()->flash('accessKey', $request->input('projectName'));
-//        $request->session()->flash('accessKey', $request->input('fileName'));
-
-
         $fileName = $request->fileName;
         $accessKey = $request->accessKey;
         $secretKey = $request->secretKey;
@@ -47,20 +41,24 @@ git clone https://github.com/$deployURL.git /var/www/html/$gitRepository
 sudo mv /var/www/html/$gitRepository/* /var/www/html/
 sudo rm -r /var/www/html/$gitRepository";
 
-        Storage::disk('local')->put('./public/files/terraform.tfvars', $file_contents);
-        Storage::disk('local')->put('./public/files/user_data.sh', $user_data);
+        Log::debug($request);
+        Log::debug($deployURL);
+        Log::debug($gitRepository);
+        $test = "hoge";
 
-        $files = glob(public_path() . '/storage/files/*');
+        Storage::disk('local')->put('/public/files/terraform.tfvars', $file_contents);
+        Storage::disk('local')->put('/public/files/user_data.sh', $user_data);
+//        Storage::disk('local')->put('hoge.txt', $test);
+
+        $files = glob( public_path().'/storage/files/*');
+
+        Log::debug($files);
 
         Zipper::make("./zip/$fileName.zip")->add($files)->close();
 
         return response()
             ->download(public_path() . "/zip/$fileName.zip");
 
-//        return redirect()->route('hoge')->with([
-//            'fileName' => $fileName,
-//            'request' => $request
-//        ]);
     }
 
 

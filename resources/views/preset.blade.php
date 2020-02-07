@@ -24,10 +24,10 @@
                         <label>
                             <input id="default" type="radio" name="preset" value="default" checked />
                             <span>
-                                <span class="font">デフォルト（簡易）</span>
+                                <span class="font">デフォルト（DBなし）</span>
                             </span>
                         </label>
-                        <p>VPC, Subnet, EC2</p>
+                        <p>VPC, Subnet, ,EC2(apache)</p>
                     </div>
                 </label>
 
@@ -36,13 +36,12 @@
                         <label>
                             <input id="robust" type="radio" name="preset" value="robust" disabled="disabled" />
                             <span>
-                                <span class="font">デフォルト（堅牢）</span>
+                                <span class="font">デフォルト（DBあり）</span>
                             </span>
                         </label>
-                        <p>VPC,Subnet</p>
+                        <p>VPC, Subnet, EC2(Apache), Amazon RDS</p>
                     </div>
                 </label>
-
 
                 <label for="manual">
                     <div class="card-panel hoverable radio-range">
@@ -67,7 +66,6 @@
                         </button>
                     </div>
                 </div>
-
             </div>
         </form>
     </main>

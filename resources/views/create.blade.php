@@ -18,9 +18,12 @@
                 @csrf
                 <div class="input-field col s6 offset-s3 folderName">
                     <i class="material-icons prefix">folder_open</i>
-                    <input id="folderName" type="text" name="fileName" class="validate" placeholder="プロジェクト名" required>
+                    <input id="folderName" type="text" name="fileName" class="validate" placeholder=""
+                           value="{{ old('fileName') }}">
                     <label for="folderName" class="truncate">プロジェクトフォルダ</label>
-                    <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                    @if ($errors->has('fileName'))
+                        <span class="helper-text red-text">{{ $errors->first('fileName') }}</span>
+                    @endif
                 </div>
 
                 <div class="input-field col s6 offset-s3 cloudName">
@@ -37,14 +40,14 @@
 
             <div class="row">
                 <div class="col offset-s3">
-                    <label for="hoge" class="ignore-str">
+                    <label for="ignoreBtn" class="ignore-str">
                         <span>.gitignoreを作成する（推奨）</span>
                     </label>
                 </div>
                 <div class="col offset-s2">
                     <div class="switch">
                         <label>
-                            <input type="checkbox" id="hoge" checked />
+                            <input type="checkbox" id="ignoreBtn" checked/>
                             <span class="lever"></span>
                         </label>
                     </div>
@@ -54,7 +57,7 @@
             <div class="row">
                 <div class="col s12 center btn-range">
                     <button class="btn-origin btn-large waves-effect waves-light" type="button" name="action"
-                            onclick="history.back()">キャンセル
+                            onclick="window.location='{{ route("home") }}'">キャンセル
                         <i class="material-icons left">arrow_back</i>
                     </button>
 
@@ -65,16 +68,14 @@
             </div>
         </form>
     </main>
-
-    <script>
-        //セレクト
-        $(document).ready(function () {
-            $('select').formSelect();
-        });
-    </script>
-
 @endsection
 
+{{-- css --}}
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/create.css') }}">
+@endsection
+
+{{-- js --}}
+@section('js')
+    <script src="{{ asset('js/create.js') }}"></script>
 @endsection

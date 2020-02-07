@@ -1,18 +1,69 @@
-main {
-    position: relative;
+body {
+    background-image: url("../images/huga.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    width: 100vw;
 
-    .createBtn {
-        position: absolute;
-        bottom: 5vh;
+    header {
+        .color {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    }
 
-        .hoge {
+    main {
+        position: relative;
 
-            height: 60px;
-            background-color: blue;
+        h1 {
+            margin-top: 30vh;
+            font-family: serif;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 3px;
+            font-size: 10vh;
+            padding: 200px 0 0 0;
+            color: #222222;
+            text-shadow: 2px 2px 3px #5f5f5f;
+        }
 
-            &:hover {
-                background-color: red;
+        .formBtn {
+            position: absolute;
+            bottom: 7vh;
+
+            .btn-large {
+                background-color: rgba(215, 215, 215, 1);
+                border: solid 4px #d7d7d7;
+                color: #222222;
+                box-shadow: none;
+
+            }
+
+            .btnRange {
+                height: 60px;
+
+                h6 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    //footer
+    .page-footer {
+        background-color: rgba(255, 255, 255, 0.2);
+
+        .container {
+
+            p {
+                color: #222;
             }
         }
     }
 }
+
+
+
+
+
+
+

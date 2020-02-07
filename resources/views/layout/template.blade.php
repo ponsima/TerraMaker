@@ -3,7 +3,8 @@
 @include('layout.head')
 {{--  ページ独自のcssを参照  --}}
 @yield('css')
-<body>
+@yield('js')
+<body class="fadeout">
 <!--ヘッダー-->
 @include('layout.header')
 
@@ -14,10 +15,5 @@
 @include('layout.footer')
 
 </body>
-<script>
-    $(document).ready(function(){
-        $('ul.tabs').tabs();
-    });
-</script>
 
 </html>

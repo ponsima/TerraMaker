@@ -38,3 +38,9 @@ Route::post('/create/preset/setting/download/', 'DownloadController@download')->
 Route::get('/create/preset/setting/download/finish', 'CreateController@finish')->name('finish');
 
 Route::post('/create/preset/setting/download/test', 'DownloadController@test')->name('test');
+
+
+
+Route::get('/test/',function () {
+    return view('test');
+});

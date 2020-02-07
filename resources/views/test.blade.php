@@ -2,6 +2,18 @@
 
 @section('content')
     <main class="container">
-        <h4 class="center-align">{{ $fileName }}</h4>
+        <h1 class="animated fadeInLeft">Example</h1>
+
+        <div class="info">
+            <svg>
+                <text class="textline">hoge</text>
+            </svg>
+        </div>
     </main>
 @endsection
+
+@section('css')
+    <link rel="stylesheet" href="{{ asset('./css/test.css') }}">
+@endsection
+
+

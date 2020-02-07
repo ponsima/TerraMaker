@@ -14,7 +14,6 @@
 
         <form action="{{ route('download') }}" method="post">
             @csrf
-
             <input type="hidden" name="fileName" value="{{ $fileName }}">
 
             <div class="row">
@@ -58,17 +57,22 @@
                         <i class="material-icons left">arrow_back</i>
                     </button>
 
-                    <button class="btn-origin btn-large waves-effect waves-light" type="submit" formtarget="_blank">作成する
+                    <button class="btn-origin btn-large waves-effect waves-light download-method" type="submit" formtarget="_blank">作成する
                         <i class="material-icons right">check</i>
                     </button>
                 </div>
             </div>
         </form>
-
     </main>
 @endsection
 
+{{-- css --}}
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/setting.css') }}">
+@endsection
+
+{{-- js --}}
+@section('js')
+    <script src="{{ asset('js/downloaded.js') }}"></script>
 @endsection
 

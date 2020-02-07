@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 class CreateController extends Controller
@@ -12,6 +13,30 @@ class CreateController extends Controller
     }
 
     public function preset(Request $request) {
+
+//        バリデーション
+        $inputs = $request->all();
+
+        $rules = [
+            'fileName' => 'required|alpha_dash|regex:/^[a-zA-Z0-9]+[a-zA-Z0-9-_]+$/',
+        ];
+
+        $messages = [
+//            空欄不可
+            'fileName.required' => 'フォルダ名は必須',
+//            特殊文字不可
+            'fileName.alpha_dash' => 'フォルダ名が不正',
+//            日本語不可
+            'fileName.regex' => 'フォルダ名が不正'
+        ];
+
+        $validation = Validator::make($inputs, $rules, $messages);
+
+        if ($validation->fails()){
+            // 前のページにリダイレクトさせる
+            // その際、エラーメッセージをinputデータとともに変数を渡す
+            return redirect()->back()->withErrors($validation->errors())->withInput();
+        }
 
 //        formの値を変数へ格納
         $fileName = $request->fileName;
@@ -49,9 +74,8 @@ class CreateController extends Controller
         ]);
     }
 
-    public function confirm(Request $request)
-    {
-
+    public function finish() {
+        return view('finish');
     }
 
 }

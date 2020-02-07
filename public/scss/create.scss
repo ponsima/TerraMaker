@@ -1,7 +1,5 @@
 main {
 
-    //background-color: lightgoldenrodyellow;
-
     .breadcrumb-list {
         @extend .row !optional;
         height: 64px;
@@ -45,7 +43,7 @@ main {
             margin: 10px 0 0 0;
 
             label {
-                font-size: 20px;
+                font-size: 18px;
             }
         }
 
@@ -53,7 +51,7 @@ main {
             margin: 30px 0 20px 0;
 
             label {
-                font-size: 18px;
+                font-size: 16px;
             }
         }
 
@@ -62,7 +60,6 @@ main {
         }
 
         .btn-range {
-            //background-color: lightcoral;
             margin-top: 107px;
 
             .btn-origin {
