@@ -4,7 +4,7 @@
 {{--  ページ独自のcssを参照  --}}
 @yield('css')
 @yield('js')
-<body class="fadeout">
+<body>
 <!--ヘッダー-->
 @include('layout.header')
 

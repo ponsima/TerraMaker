@@ -5,12 +5,16 @@
     <main class="container">
         <div class="row">
 
-            <h1 class="col s12 center textLine">TerraMaker</h1>
+            <div class="col s12 center title">
+                <svg>
+                    <text x="50%" y="27%" class="textLine">TerraMaker</text>
+                </svg>
+            </div>
 
-            <h6 class="col s12 center">texttexttexttext</h6>
+            <h6 class="col s12 center subTitle">あなただけのサイトを公開してみませんか？</h6>
 
             <form action="{{ route('create') }}" method="get" class="col s12 center formBtn">
-                <button class="btn-large btnRange">
+                <button class="btn-large btnRange hoge">
                     <h6>新しいプロジェクトを作成する
                         <i class="material-icons left">add</i>
                     </h6>

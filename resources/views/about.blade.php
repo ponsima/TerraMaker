@@ -1,7 +1,16 @@
 @extends('layout.template')
 
 @section('content')
-    <main class="container">
-        <h4 class="center-align">hogehoge</h4>
+    <main class="backgroundImage">
+        <div class="hero">
+            <p>Building Awasome Website</p>
+            <h1>COMING SOON</h1>
+
+            <hr>
+        </div>
     </main>
+@endsection
+
+@section('css')
+    <link rel="stylesheet" href="{{ asset('css/comingSoon.css') }}">
 @endsection

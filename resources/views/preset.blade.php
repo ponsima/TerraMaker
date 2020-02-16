@@ -4,13 +4,8 @@
     <main class="container">
         <h4 class="center-align">新しいプロジェクトを作成する</h4>
 
-        <div class="col s12 center">
-            <div class="breadcrumb-list">
-                <span class="breadcrumb first">プロジェクト名</span>
-                <span class="breadcrumb second">プリセット</span>
-                <span class="breadcrumb third">設定</span>
-            </div>
-        </div>
+        {{--  パンくずリスト  --}}
+        @include('layout.Breadcrumbs')
 
         <form action="{{ route('setting') }}" method="post">
             @csrf
@@ -22,7 +17,7 @@
                 <label for="default">
                     <div class="card-panel hoverable radio-range">
                         <label>
-                            <input id="default" type="radio" name="preset" value="default" checked />
+                            <input id="default" type="radio" name="preset" value="default" checked/>
                             <span>
                                 <span class="font">デフォルト（DBなし）</span>
                             </span>
@@ -34,7 +29,7 @@
                 <label for="robust">
                     <div class="card-panel hoverable radio-range">
                         <label>
-                            <input id="robust" type="radio" name="preset" value="robust" disabled="disabled" />
+                            <input id="robust" type="radio" name="preset" value="robust" disabled="disabled"/>
                             <span>
                                 <span class="font">デフォルト（DBあり）</span>
                             </span>
@@ -46,7 +41,7 @@
                 <label for="manual">
                     <div class="card-panel hoverable radio-range">
                         <label>
-                            <input id="manual" type="radio" name="preset" value="manual" disabled="disabled" />
+                            <input id="manual" type="radio" name="preset" value="manual" disabled="disabled"/>
                             <span>
                                 <span class="font">手動</span>
                             </span>
@@ -56,7 +51,7 @@
 
                 <div class="row">
                     <div class="col s12 center btn-range">
-                        <button class="btn-origin btn-large waves-effect waves-light" type="button" name="action"
+                        <button class="btn-origin btn-large waves-effect waves-light next" type="button" name="action"
                                 onclick="history.back()">戻る
                             <i class="material-icons left">arrow_back</i>
                         </button>
@@ -73,6 +68,10 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/preset.css') }}">
+@endsection
+
+@section('js')
+    <script src="{{ asset('js/preset.js') }}"></script>
 @endsection
 
 

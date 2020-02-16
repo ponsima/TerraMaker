@@ -4,13 +4,7 @@
     <main class="container">
         <h4 class="center-align">新しいプロジェクトを作成する</h4>
 
-        <div class="col s12 center">
-            <div class="breadcrumb-list">
-                <span class="breadcrumb first">プロジェクト名</span>
-                <span class="breadcrumb second">プリセット</span>
-                <span class="breadcrumb third">設定</span>
-            </div>
-        </div>
+        @include('layout.Breadcrumbs')
 
         <form action="{{ route('download') }}" method="post">
             @csrf
