@@ -18,6 +18,8 @@ Route::get('/' , 'IndexController@home')->name('home');
 //ナビゲーションリスト
 //アバウト
 Route::get('/about/', 'IndexController@about')->name('about');
+//問い合わせページ
+Route::get('/contact/', 'IndexController@contact')->name('contact');
 
 //使い方
 
@@ -37,10 +39,9 @@ Route::post('/create/preset/setting/download/', 'DownloadController@download')->
 
 Route::get('/create/preset/setting/download/finish', 'CreateController@finish')->name('finish');
 
-Route::post('/create/preset/setting/download/test', 'DownloadController@test')->name('test');
+//Route::post('/create/preset/setting/download/test', 'DownloadController@test')->name('test');
 
 
+//テストページ
+Route::get('/test/', 'IndexController@test')->name('test');
 
-Route::get('/test/',function () {
-    return view('test');
-});
