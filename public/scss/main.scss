@@ -1,65 +1,121 @@
+@media screen and (max-width: 480px) {
+    .textLine {
+        animation: stroke-anim 5s linear;
+    }
+
+    @keyframes stroke-anim {
+        0% {
+            stroke-dashoffset: 155%;
+            fill: transparent;
+        }
+        20% {
+            fill: rgba(255, 255, 255, 0.2);
+            stroke-dashoffset: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .textLine {
+        animation: stroke-anim 5s linear;
+    }
+    @keyframes stroke-anim {
+        0% {
+            stroke-dashoffset: 155%;
+            fill: transparent;
+        }
+        45% {
+            fill: rgba(255, 255, 255, 0.2);
+            stroke-dashoffset: 100%;
+
+        }
+    }
+}
+
+/* じわっと画像が表示される */
+@keyframes fadeIn { /*上のbody内で呼び出しているアニメーションと名前をそろえる*/
+    0% {
+        opacity: 0
+    }
+    /* 始め */
+    100% {
+        opacity: 1
+    }
+    /* 終わり */
+}
+
 body {
+
     background-image: url("../images/huga.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    width: 100vw;
 
-    header {
-        .color {
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-    }
+    .title {
+        margin-top: 30vh;
+        width: 100%;
+        height: 120px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
 
-    main {
-        position: relative;
+        svg {
+            //background-color: red;
+            width: 500px;
+            height: 267px;
 
-        h1 {
-            margin-top: 30vh;
-            font-family: serif;
-            font-weight: bold;
-            text-align: center;
-            letter-spacing: 3px;
-            font-size: 10vh;
-            padding: 200px 0 0 0;
-            color: #222222;
-            text-shadow: 2px 2px 3px #5f5f5f;
-        }
-
-        .formBtn {
-            position: absolute;
-            bottom: 7vh;
-
-            .btn-large {
-                background-color: rgba(215, 215, 215, 1);
-                border: solid 4px #d7d7d7;
+            .textLine {
+                //font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+                font-family: serif;
+                font-weight: bold;
+                text-align: center;
+                letter-spacing: 3px;
+                font-size: 70px;
                 color: #222222;
-                box-shadow: none;
-
-            }
-
-            .btnRange {
-                height: 60px;
-
-                h6 {
-                    text-align: center;
-                }
+                text-anchor: middle;
+                stroke: #222222;
+                fill: rgba(34, 34, 34, 1);
+                stroke-dasharray: 170%;
+                stroke-width: 1px;
             }
         }
+
     }
 
-    //footer
-    .page-footer {
-        background-color: rgba(255, 255, 255, 0.2);
+    .subTitle {
+        font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+        //font-family: serif;
+        font-size: 1.25rem;
+        //color: red;
+    }
 
-        .container {
+    .formBtn {
+        margin-top: 8.5vh;
 
-            p {
-                color: #222;
+        .btn-large {
+            background-color: rgba(255, 255, 255, 0);
+            box-shadow: none;
+            text-shadow: #222222;
+            border: solid 3px #222222;
+            color: #222222;
+            border-radius: 5px;
+        }
+
+        .btnRange {
+            height: 60px;
+
+            h6 {
+                text-align: center;
+            }
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.51);
+                //color: #;
             }
         }
     }
 }
+
 
 
 
