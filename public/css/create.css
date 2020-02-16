@@ -19,6 +19,7 @@ main .breadcrumb-list .breadcrumb:before {
   color: #757575;
 }
 main form {
+  margin-top: 5vh;
   height: 411px;
 }
 main form .folderName {
