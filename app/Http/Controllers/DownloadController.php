@@ -41,18 +41,14 @@ git clone https://github.com/$deployURL.git /var/www/html/$gitRepository
 sudo mv /var/www/html/$gitRepository/* /var/www/html/
 sudo rm -r /var/www/html/$gitRepository";
 
-        Log::debug($request);
-        Log::debug($deployURL);
-        Log::debug($gitRepository);
-        $test = "hoge";
+//        Log::debug($request);
+//        Log::debug($deployURL);
+//        Log::debug($gitRepository);
 
         Storage::disk('local')->put('/public/files/terraform.tfvars', $file_contents);
         Storage::disk('local')->put('/public/files/user_data.sh', $user_data);
-//        Storage::disk('local')->put('hoge.txt', $test);
 
         $files = glob( public_path().'/storage/files/*');
-
-        Log::debug($files);
 
         Zipper::make("./zip/$fileName.zip")->add($files)->close();
 
