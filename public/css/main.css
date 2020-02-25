@@ -28,15 +28,20 @@
     }
   }
 }
-/* じわっと画像が表示される */@keyframes fadeIn {
-  /*上のbody内で呼び出しているアニメーションと名前をそろえる*/
-  /* 始め */
-  /* 終わり */
-  0% {
+@keyframes fade-in {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 body {
@@ -44,6 +49,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+  animation: fade-in 600ms ease 0s 1 forwards;
 }
 body .title {
   margin-top: 30vh;
@@ -75,13 +81,13 @@ body .subTitle {
   font-size: 1.25rem;
 }
 body .formBtn {
-  margin-top: 8.5vh;
+  margin-top: 4.5vh;
 }
 body .formBtn .btn-large {
   background-color: rgba(255, 255, 255, 0);
   box-shadow: none;
   text-shadow: #222;
-  border: solid 3px #222;
+  border: solid 1.5px #222;
   color: #222;
   border-radius: 5px;
 }
@@ -92,5 +98,6 @@ body .formBtn .btnRange h6 {
   text-align: center;
 }
 body .formBtn .btnRange:hover {
-  background-color: rgba(255, 255, 255, 0.51);
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 2px 2px 4px gray;
 }

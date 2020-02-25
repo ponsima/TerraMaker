@@ -1,42 +1,45 @@
-main .breadcrumb-list {
+body {
+  background: linear-gradient(100deg, #fff, #f0e7d1);
+}
+body main .breadcrumb-list {
   height: 64px;
   line-height: 64px;
   margin: 0;
 }
-main .breadcrumb-list .first {
+body main .breadcrumb-list .first {
   color: #acacac;
 }
-main .breadcrumb-list .second {
+body main .breadcrumb-list .second {
   color: #acacac;
 }
-main .breadcrumb-list .third {
+body main .breadcrumb-list .third {
   color: #222;
 }
-main .breadcrumb-list .breadcrumb {
+body main .breadcrumb-list .breadcrumb {
   cursor: default;
 }
-main .breadcrumb-list .breadcrumb:before {
+body main .breadcrumb-list .breadcrumb:before {
   color: #757575;
 }
-main form {
+body main form {
   height: 411px;
 }
-main form .key-range input[type=text] {
+body main form .key-range input[type=text] {
   font-size: 20px;
   color: #222;
 }
-main form .key-range label {
+body main form .key-range label {
   font-size: 16px;
 }
-main form .key-range2 {
+body main form .key-range2 {
   margin: 20px 0 0 0;
 }
-main form .deployLink {
+body main form .deployLink {
   margin: 30px 0 0 0;
 }
-main form .btn-range {
+body main form .btn-range {
   margin: 55px 0 0 0;
 }
-main form .btn-range .btn-origin {
+body main form .btn-range .btn-origin {
   margin: 0 10px 0 10px;
 }

@@ -1,49 +1,52 @@
-main .breadcrumb-list {
+body {
+  background: linear-gradient(100deg, #fff, #f0e7d1);
+}
+body main .breadcrumb-list {
   height: 64px;
   line-height: 64px;
   margin: 0;
 }
-main .breadcrumb-list .first {
+body main .breadcrumb-list .first {
   color: #222;
 }
-main .breadcrumb-list .second {
+body main .breadcrumb-list .second {
   color: #acacac;
 }
-main .breadcrumb-list .third {
+body main .breadcrumb-list .third {
   color: #acacac;
 }
-main .breadcrumb-list .breadcrumb {
+body main .breadcrumb-list .breadcrumb {
   cursor: default;
 }
-main .breadcrumb-list .breadcrumb:before {
+body main .breadcrumb-list .breadcrumb:before {
   color: #757575;
 }
-main form {
+body main form {
   margin-top: 5vh;
   height: 411px;
 }
-main form .folderName {
+body main form .folderName {
   margin: 10px 0 0 0;
 }
-main form .folderName label {
+body main form .folderName label {
   font-size: 18px;
 }
-main form .cloudName {
+body main form .cloudName {
   margin: 30px 0 20px 0;
 }
-main form .cloudName label {
+body main form .cloudName label {
   font-size: 16px;
 }
-main form .ignore {
+body main form .ignore {
   padding: 0 0 50px 0;
 }
-main form .btn-range {
+body main form .btn-range {
   margin-top: 107px;
 }
-main form .btn-range .btn-origin {
+body main form .btn-range .btn-origin {
   margin: 0 10px 0 10px;
 }
-main form .ignore-str {
+body main form .ignore-str {
   cursor: pointer;
   font-size: 16px;
   color: #222;
