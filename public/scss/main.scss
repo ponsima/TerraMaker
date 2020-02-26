@@ -32,16 +32,22 @@
     }
 }
 
-/* じわっと画像が表示される */
-@keyframes fadeIn { /*上のbody内で呼び出しているアニメーションと名前をそろえる*/
-    0% {
-        opacity: 0
+@keyframes fade-in {
+    from {
+        opacity: 0;
     }
-    /* 始め */
-    100% {
-        opacity: 1
+    to {
+        opacity: 1;
     }
-    /* 終わり */
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 body {
@@ -50,6 +56,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
+
+    animation: fade-in 600ms ease 0s 1 forwards;
 
     .title {
         margin-top: 30vh;
@@ -90,13 +98,13 @@ body {
     }
 
     .formBtn {
-        margin-top: 8.5vh;
+        margin-top: 4.5vh;
 
         .btn-large {
             background-color: rgba(255, 255, 255, 0);
             box-shadow: none;
             text-shadow: #222222;
-            border: solid 3px #222222;
+            border: solid 1.5px #222222;
             color: #222222;
             border-radius: 5px;
         }
@@ -109,8 +117,8 @@ body {
             }
 
             &:hover {
-                background-color: rgba(255, 255, 255, 0.51);
-                //color: #;
+                background-color: rgba(255, 255, 255, 0.4);
+                box-shadow: 2px 2px 4px gray;
             }
         }
     }
