@@ -24,12 +24,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
 
-    {{--    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>--}}
-
 <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
-
-    {{--    <script src="{{ asset('js/tab_line.js') }}"></script>--}}
 
     {{--  template css  --}}
     <link rel="stylesheet" href="{{ asset('css/template.css') }}">
