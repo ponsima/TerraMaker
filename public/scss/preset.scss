@@ -1,64 +1,68 @@
-main {
+body {
+    background: linear-gradient(100deg, #FFF, #F0E7D1);
 
-    h4 {
-        color: #222;
-    }
+    main {
 
-    .breadcrumb-list {
-        @extend .row !optional;
-        height: 64px;
-        line-height: 64px;
-        margin: 0;
-
-        .first {
-            color: #acacac;
-        }
-
-        .second {
+        h4 {
             color: #222;
         }
 
-        .third {
-            color: #acacac;
-        }
+        .breadcrumb-list {
+            @extend .row !optional;
+            height: 64px;
+            line-height: 64px;
+            margin: 0;
 
-        .breadcrumb {
-            @extend .breadcrumb !optional;
-            @extend .grey-text !optional;
-
-            &:last-child {
-                @extend .black-text !optional;
+            .first {
+                color: #acacac;
             }
 
-            &:before {
-                color: #757575;
-            }
-
-            cursor: default;
-        }
-    }
-
-    form {
-        //background-color: lightgreen;
-        height: 411px;
-
-        .radio-range {
-            font-size: 13px;
-
-            .font {
-                font-size: 18px;
+            .second {
                 color: #222;
             }
-        }
 
-        .btn-range {
-            margin-top: 30px;
+            .third {
+                color: #acacac;
+            }
 
-            .btn-origin {
-                margin: 0 10px 0 10px;
+            .breadcrumb {
+                @extend .breadcrumb !optional;
+                @extend .grey-text !optional;
+
+                &:last-child {
+                    @extend .black-text !optional;
+                }
+
+                &:before {
+                    color: #757575;
+                }
+
+                cursor: default;
             }
         }
 
+        form {
+            //background-color: lightgreen;
+            height: 411px;
 
+            .radio-range {
+                font-size: 13px;
+
+                .font {
+                    font-size: 18px;
+                    color: #222;
+                }
+            }
+
+            .btn-range {
+                margin-top: 30px;
+
+                .btn-origin {
+                    margin: 0 10px 0 10px;
+                }
+            }
+
+
+        }
     }
 }

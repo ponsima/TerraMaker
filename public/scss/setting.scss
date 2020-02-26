@@ -1,69 +1,74 @@
-main {
+body {
+    background: linear-gradient(100deg, #FFF, #F0E7D1);
 
-    .breadcrumb-list {
-        @extend .row !optional;
-        height: 64px;
-        line-height: 64px;
-        margin: 0;
+    main {
 
-        .first {
-            color: #acacac;
-        }
+        .breadcrumb-list {
+            @extend .row !optional;
+            height: 64px;
+            line-height: 64px;
+            margin: 0;
 
-        .second {
-            color: #acacac;
-        }
-
-        .third {
-            color: #222;
-        }
-
-        .breadcrumb {
-            @extend .breadcrumb !optional;
-            @extend .grey-text !optional;
-
-            &:last-child {
-                @extend .black-text !optional;
+            .first {
+                color: #acacac;
             }
 
-            &:before {
-                color: #757575;
+            .second {
+                color: #acacac;
             }
 
-            cursor: default;
-        }
-    }
-
-    form {
-        //background-color: lightgreen;
-        height: 411px;
-
-        .key-range {
-
-            input[type=text] {
-                font-size: 20px;
+            .third {
                 color: #222;
             }
-            label {
-                font-size: 16px;
+
+            .breadcrumb {
+                @extend .breadcrumb !optional;
+                @extend .grey-text !optional;
+
+                &:last-child {
+                    @extend .black-text !optional;
+                }
+
+                &:before {
+                    color: #757575;
+                }
+
+                cursor: default;
+            }
+        }
+
+        form {
+            //background-color: lightgreen;
+            height: 411px;
+
+            .key-range {
+
+                input[type=text] {
+                    font-size: 20px;
+                    color: #222;
+                }
+
+                label {
+                    font-size: 16px;
+                }
+
             }
 
-        }
+            .key-range2 {
+                margin: 20px 0 0 0;
+            }
 
-        .key-range2 {
-            margin: 20px 0 0 0;
-        }
+            .deployLink {
+                margin: 30px 0 0 0;
+            }
 
-        .deployLink {
-            margin: 30px 0 0 0;
-        }
+            .btn-range {
+                //background-color: lightcoral;
+                margin: 55px 0 0 0;
 
-        .btn-range {
-            //background-color: lightcoral;
-            margin: 55px 0 0 0;
-
-            .btn-origin {
-                margin: 0 10px 0 10px;
+                .btn-origin {
+                    margin: 0 10px 0 10px;
+                }
             }
         }
     }

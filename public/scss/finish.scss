@@ -1,13 +1,28 @@
-//main {
-//    background-color: #d6e9f8;
-//
-//    .hoge {
-//        height: 500px;
-//        background-color: #b3e8ca;
-//
-//        h4 {
-//            margin: 0 auto;
-//        }
-//    }
-//
-//}
+body {
+    background: linear-gradient(100deg, #FFF, #F0E7D1);
+
+
+    main {
+
+        .finishMsg {
+            height: 400px;
+
+            h4 {
+                margin: 10rem auto 0 auto;
+                font-size: 3rem;
+                font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+
+            }
+        }
+
+        form {
+            height: 300px;
+            .btn-large {
+                width: 300px;
+                font-size: 1.2rem;
+            }
+        }
+
+
+    }
+}
