@@ -51,10 +51,10 @@ https://youtu.be/ZoYaWzb7LFo
 フロントエンド
 - HTML
 - CSS( materializecss, SCSS )
-- JS(jQuery)
+- JS( jQuery )
 
 バックエンド
-- PHP(Laravel)
+- PHP( Laravel )
 
 その他
 - AWS
